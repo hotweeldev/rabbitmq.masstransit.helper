@@ -1,0 +1,9 @@
+﻿rabbitConfig:
+  host: "rabbitmq://192.168.xxx.xxx:5672/vhost_testing"   
+  username: "hotweel"          
+  password: "xxxxxxx"          
+  consumers:                 
+    - queueName: "task_queue"         
+      maxConcurrent: 3
+      queueAssembly: "RAD.MassTransit.Helper"
+      queueService: "RAD.MassTransit.Helper.TaskService.Consumer"  
